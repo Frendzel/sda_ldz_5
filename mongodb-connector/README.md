@@ -12,12 +12,12 @@ db.createUser({user: "root",pwd: "password",roles: ["userAdminAnyDatabase", "dbA
 ```
 Creating test user
 ```
-use test
+use test_ldz5
 db.createUser(
   {
-    user: "test",
+    user: "test5",
     pwd: "test123",
-    roles: [ { role: "readWrite", db: "test" }]
+    roles: [ { role: "readWrite", db: "test_ldz5" }]
   }
 )
 ```

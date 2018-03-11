@@ -39,7 +39,7 @@ public class Connector {
             Grade grade = new Grade();
             grade.set_id(document.get("_id"));
             grade.setScore(document.getDouble("score"));
-            grade.setStudent_id(document.get("student_id"));
+            grade.setStudent_id(document.get("student_id") + "");
             grade.setType(document.getString("type"));
             objects.add(grade);
         }

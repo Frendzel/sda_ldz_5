@@ -13,7 +13,7 @@ public class Grade {
     @NotNull
     private Object _id;
     @NotNull
-    private Object student_id;
+    private String student_id;
     @NotNull
     private String type;
     @NotNull

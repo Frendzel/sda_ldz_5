@@ -113,19 +113,11 @@ public class ConnectorTest {
         for (Document document : documentsFilter1) {
             System.out.println(document.toJson(jsonBuilder));
         }
-        List<Grade> gradeObjects = new ArrayList<>();
 
         FindIterable<Document> documentsFilter2 = grades.find(filter2);
         for (Document document : documentsFilter2) {
             System.out.println(document.toJson(jsonBuilder));
-            Grade grade = new Grade();
-            grade.set_id(document.get("_id"));
-            grade.setScore(document.getDouble("score"));
-            grade.setStudent_id(document.getString("student_id"));
-            grade.setType(document.getString("type"));
-            gradeObjects.add(grade);
         }
-        gradeObjects.forEach(System.out::println);
 
         Assert.assertEquals(COLLECTION_SIZE, (Long) grades.count());
 
